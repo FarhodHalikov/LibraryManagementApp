@@ -1,0 +1,8 @@
+#Ignore files
+*.txt
+.vscode
+*.exe
+*.docx
+
+# Do not ignore
+!README.md
