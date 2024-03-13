@@ -42,7 +42,6 @@ struct book
         cout << "Publisher: "; getline(cin, publisher);
         cout << "Price: ";     cin >> price;
         cout << "Quantity: ";  cin >> quantity;
-        ClearBuffer();
     }
 
     //Output Book Data 

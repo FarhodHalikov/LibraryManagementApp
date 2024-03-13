@@ -28,9 +28,10 @@ class Customer
     //Input Method 
     void SetCustomer()
     {
+        ClearBuffer();
         cout << "Fullname: "; getline(cin,fullname);
         cout << "Contact: "; getline(cin, contact);
-        purchased_book.SetBook();
+        //purchased_book.SetBook();
     }
 
     //Output method

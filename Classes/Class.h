@@ -31,7 +31,8 @@ void ClearConsole()
 //Input any key to continue
 void ReadKey()
 {
-    cout << "Press Any Key to continue...";
+    ClearBuffer();
+    cout << "\nPress Any Key to continue...";
     cin.get();
 }
 #endif

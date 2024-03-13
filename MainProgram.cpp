@@ -45,12 +45,14 @@ int main(void)
         //Switch Between the Pages
         switch (input)
         {
+            case 0:
+                return 0;
+
             //Books Available Page
             case 1:
                 ClearConsole();
                 cout << " * Books Available Page *\n" << endl;
                 library.PrintBooks();
-                ClearBuffer();
                 ReadKey();
                 break;
 
@@ -59,7 +61,6 @@ int main(void)
                 ClearConsole();
                 cout << " * Adding Book Page *\n" << endl;
                 library.AddBook();
-                cout << "\n Book is Added!\n" << endl;
                 ReadKey();
                 break;
 
@@ -72,7 +73,6 @@ int main(void)
                 ClearBuffer();
                 cin >> index;
                 library.DeleteBook(index);
-                ClearBuffer();
                 ReadKey();
                 break;
 
@@ -81,24 +81,40 @@ int main(void)
                 ClearConsole();
                 cout << "* Print All Customers Page *\n" << endl;
                 library.PrintCustomers();
-                ClearBuffer();
                 ReadKey();
                 break;
             
             //Add Customer Page
             case 5:
+                ClearConsole();
+                cout << "* Add Customer Page *\n" << endl;
+                library.AddCustomer(); 
                 break;
 
             //Remove Customer Page
             case 6:
+                ClearConsole();
+                cout <<" * Removing Customer Page *\n\n";
+                cout << " Input INDEX of the Customer you'd like to remove from library\n";
+                cout << " Index input: ";
+                ClearBuffer();
+                cin >> index;
+                library.DeleteCustomer(index);
+                ReadKey();
                 break;
 
             //Save Books to 'database'
             case 7:
+                ClearConsole();
+                library.SaveBooks();
+                ReadKey();
                 break;
-            
+
             //Save Customers to 'database'
             case 8:
+                ClearConsole();
+                library.SaveCustomers();
+                ReadKey();
                 break;
             
             //Output Message if Input is invalid
@@ -109,8 +125,7 @@ int main(void)
                 cout << "\n-- Main Page --" << endl;
                 cout << "* input number in range 1-8 to switch between the pages"<<endl;
                 cout << "* to close the application please input 0" << endl;
-                cout << "* checkout ID (i.e. index) before entering pages like: remove book or remove customer" << endl;
-                ClearBuffer();
+                cout << "* checkout ID (i.e. index) before entering pages like: remove book or remove customer\n" << endl;
                 ReadKey();
                 break;
 

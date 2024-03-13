@@ -41,6 +41,7 @@ class Library
         books.emplace_back(); 
         // Input data for previously assigned space in memory, vector
         books.back().SetBook();
+        cout << "Book is added!" << endl;
     }
 
     // Delete book at index from books
@@ -140,6 +141,7 @@ class Library
                 outfile << "Contact: " << customers[i].contact << endl;
                 outfile << "Index: " << i << "\n\n";
             }
+            cout << "Customers Data is Saved in " << customer_file << endl;
         }
         else 
             cout << "Couldn't open a file!" << endl;
