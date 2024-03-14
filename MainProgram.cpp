@@ -16,7 +16,7 @@ int main(void)
     //init varibles
     int input;
     int index;
-    Library library;   
+    Library library;
 
     while (input != 0)
     {
@@ -126,9 +126,17 @@ int main(void)
                 cout << "* input number in range 1-8 to switch between the pages"<<endl;
                 cout << "* to close the application please input 0" << endl;
                 cout << "* checkout ID (i.e. index) before entering pages like: remove book or remove customer\n" << endl;
+                cout << "\n-- Add Book Page --" << endl;
+                cout << "* Title: <string> *" << endl;
+                cout << "* Author: <string> *" << endl;
+                cout << "* Publisher: <string> *" << endl;
+                cout << "* Price: <double> *" << endl;
+                cout << "* Quantity: <int> *" <<endl;
+                cout << "\n-- Add Customer --" << endl;
+                cout <<  "* Fullname: <string> *" << endl;
+                cout << "* Contact: <string> *" << endl;
                 ReadKey();
                 break;
-
         }
     }
 }
