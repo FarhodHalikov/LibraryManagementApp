@@ -8,12 +8,10 @@
 class Library
 {
     public:
-
     //Init variables 
 
     //vectors
-    vector<book> books =  
-    {   //Default books available in library
+    vector<book> books =  {   //Default books available in library
         {"Harry Potter and Sorcerer's Stone", "J.K. Rowling", "Harper Collins", 56.99, 50},
         {"The Great Gatsby", "F. Fitzgerald", "Harper Collins", 60.99,50},
         {"1984", "George Orwell", "Harper Collins", 60.99, 50},
