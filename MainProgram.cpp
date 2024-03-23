@@ -1,7 +1,6 @@
 #include "Classes/Class.h"
 #include "Classes/Library.h"
 
-
 /*
 Notes:
 1. Add purchased_book to customer
@@ -131,10 +130,10 @@ int main(void)
                 cout << "* Author: <string> *" << endl;
                 cout << "* Publisher: <string> *" << endl;
                 cout << "* Price: <double> *" << endl;
-                cout << "* Quantity: <int> *" <<endl;
+                cout << "* Quantity: <int> *" << endl;
                 cout << "\n-- Add Customer --" << endl;
                 cout <<  "* Fullname: <string> *" << endl;
-                cout << "* Contact: <string> *" << endl;
+                cout << "* Contact: <string> *\n" << endl;
                 ReadKey();
                 break;
         }
