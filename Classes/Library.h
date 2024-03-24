@@ -12,16 +12,16 @@ class Library
 
     //vectors
     vector<book> books =  {   //Default books available in library
-        {"Harry Potter and Sorcerer's Stone", "J.K. Rowling", "Harper Collins", 56.99, 50},
-        {"The Great Gatsby", "F. Fitzgerald", "Harper Collins", 60.99,50},
-        {"1984", "George Orwell", "Harper Collins", 60.99, 50},
-        {"Animal Farm", "George Orwell", "Harper Collins", 69.99, 50}
+        {"Harry Potter and Sorcerer's Stone", "J.K. Rowling", "11-22-33", 56.99, 50},
+        {"The Great Gatsby", "F. Fitzgerald", "12-23-34", 60.99,50},
+        {"1984", "George Orwell", "13-34-34", 60.99, 50},
+        {"Animal Farm", "George Orwell", "23-44-55", 69.99, 50}
     };
 
     vector<Customer> customers =
     {
-        Customer("John Snow", "john.snow@gmail.com"),
-        Customer("Harry Potter", "potterharry@gmai.com")
+        Customer("John Snow", "john.snow@gmail.com", "11-22-33", true), //paid 
+        Customer("Harry Potter", "potterharry@gmai.com", "13-34-34" ,false) //not paid
     };
     
     //filenames
@@ -54,7 +54,7 @@ class Library
         else 
             cout << "\n Invalid Index. Index out of range." << endl;
     }
-
+    
     // Output essential data about library
     void PrintLibraryData()
     {
@@ -115,7 +115,7 @@ class Library
             {
                 outfile << "Title: " << books[i].title << endl;
                 outfile << "Author: " << books[i].author << endl;
-                outfile << "Publisher: " << books[i].publisher << endl;
+                outfile << "ISBN: " << books[i].isbn << endl;
                 outfile << "Price: " << books[i].price << "$" << endl;
                 outfile << "Quantity: " << books[i].quantity << endl;
                 outfile << "Index: " << i << "\n\n";
@@ -123,6 +123,16 @@ class Library
             cout << "Books Data is Saved in " << book_file << endl; 
         }
     }
+
+    // int findBookByIsbn(const vector<book>& books, const string& isbn)
+    // {
+    //     for (size_t i = 0; i < books.size(); i++)
+    //     {
+    //         if (books[i].isbn == isbn)
+    //             return i; //if books is found return its index
+    //     }
+    //     return -1; //return -1 if not found
+    // }
 
     //Sava Customers' data to customers.txt
     void SaveCustomers()
@@ -137,6 +147,8 @@ class Library
             {
                 outfile << "Fullname: " << customers[i].fullname << endl;
                 outfile << "Contact: " << customers[i].contact << endl;
+                outfile << "ISBN: " << customers[i].purchased_book_isbn << endl;
+                outfile << "Paid: " << (customers[i].paid == 1 ? "True": "False") << endl;
                 outfile << "Index: " << i << "\n\n";
             }
             cout << "Customers Data is Saved in " << customer_file << endl;

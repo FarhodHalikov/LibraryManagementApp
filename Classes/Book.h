@@ -8,7 +8,7 @@ struct book
     //Init variables
     string title;
     string author;
-    string publisher;
+    string isbn;
     double price;
     int quantity;
 
@@ -19,10 +19,10 @@ struct book
     (
         const string& title, 
         const string& author,
-        const string& publisher,
+        const string& isbn,
         double price,
         int quantity
-    ): title(title), author(author), publisher(publisher), price(price), quantity(quantity){}
+    ): title(title), author(author), isbn(isbn), price(price), quantity(quantity){}
 
 
     //Destructor
@@ -37,9 +37,9 @@ struct book
     void SetBook()
     {
         ClearBuffer();
-        cout << "Title: ";      getline(cin , title);
+        cout << "Title: ";     getline(cin , title);
         cout << "Author: ";    getline(cin , author);
-        cout << "Publisher: "; getline(cin, publisher);
+        cout << "ISBN: ";      getline(cin, isbn);
         cout << "Price: ";     cin >> price;
         cout << "Quantity: ";  cin >> quantity;
     }
@@ -49,7 +49,7 @@ struct book
     {
         cout << "Title: "     << title << endl;
         cout << "Author: "    << author << endl;
-        cout << "Publisher: " << publisher << endl;
+        cout << "ISBN: "      << isbn << endl;
         cout << "Price: "     << price << "$" << endl;
         cout << "Quantity: "  << quantity << endl; 
     }; 
